@@ -203,6 +203,19 @@ git rebase {对应主机名}/master
 git pull --rebase {对应主机名} master
 ```
 
+#### 当用本地git目录来创建github仓库时
+
+```bash
+## 初始化本地仓库
+git init
+git add .
+git commit -m ''
+## 先关联github仓库
+git remote add {主机名} {ssh_url 仓库地址}
+## 提交
+git push -u {主机名} {本地分支名}
+```
+
 #### 标签 -- 某个提交版本
 
 ##### 标签管理
