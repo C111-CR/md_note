@@ -19,7 +19,7 @@ Git官网    [Git (git-scm.com)](https://git-scm.com/)
 ```bash
 # create a SSH key
 # create a new dir {.ssh} in /home/user
-ssh-keygen -t ed25519 -C "the emali"
+ssh-keygen -t ed25519 -C "the email"
 # 复制~/.ssh/id_ed25519.pub中的公钥内容
 # 到 github 中创建SSH...
 ```

@@ -153,7 +153,6 @@ R
 
 #### 帮助文档
 
-###### :help          帮助文档
-###### :help <option> 定位到option的帮助文档
-
+###### :help          			  帮助文档
+###### :help <option> 	定位到option的帮助文档
 
