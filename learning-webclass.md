@@ -1,37 +1,41 @@
-#### 数学基础： 
+## 数学基础： 
 
-#### 	微积分(40h) 
+##### 微积分 MIT 18.01/18.02
 
-#### 	线代(40h) 
+##### 	线代 	MIT 18.06
 
-#### 	离散(80h) 
+##### 	概率论 MIT 6.050J
 
-#### 	离散+概率论(100h)
+##### 离散	
 
-#### 语言： 	   
 
-#### 	python(CS61A 60h) 
 
-#### 	C++(CS106L 30h) 
+## 语言：
 
-#### 	Go
+##### 	python CS61A 
 
-#### 大课：
+##### 	C++		CS106L 
 
-#### 	数据结构 Algorithms(80h) CS61B(80h)
+##### 	Go
 
-#### 	计组	     Nand2Tetris(30h) CS61C(150h)
 
-#### 	计网         Top-Down(60h) CS144()
 
-#### 	操作系统 NJU(250h)
+## 大课：
 
-#### 	数据库     CMU15-445(150h)
+##### 	数据结构   CS61B, AlgorithmsI & II, MIT6.006, MIT6.046, UCB CS170 
 
-#### 	web开发 MitWeb(30h) CS142(150h)
+##### 	计网           Top-Down, 中科大, CS144
 
-#### 	编译原理 国防科大compiler  CS143(200h)
+##### 	操作系统   NJU, MIT6.S081, UCB CS162
 
- 
+##### 	数据库       CMU15-445
 
-#### Missing-Semester(10h)
+##### 	web开发   MitWeb CS142
+
+#### 	
+
+##### 软件工程   MIT6.031, UCB CS169
+
+##### 	计组	       Nand2Tetris, CS61C,  CMU15-213 CSAPP
+
+##### 	编译原理   国防科大compiler  CS143
