@@ -189,14 +189,14 @@ git rebase origin/master
 ## remote
 git remote -v				# 查看本地仓库所关联的远程仓库
 
-## 增加一个关联主机 关联到组长的主仓库
+## 增加一个关联主机 关联到对方的仓库
 # 主机名只是个变量 值为仓库地址 只要不是origin即可(up,upstream..)
-# 主仓库地址 https://...
-git remote add {主机名} {url 主仓库的地址} 
+# 对方仓库地址 https://...
+git remote add {主机名} {url 对方仓库的地址} 
 
-## 同步主仓库 将主仓库的数据同步到本地
-# 先使用fetch拉取主仓库的全部分支信息到本地仓库
-# 再使用rebase将远程主仓库的数据同步到本地
+## 同步仓库 将对方仓库的数据同步到本地
+# 先使用fetch拉取对方仓库的全部分支信息到本地仓库
+# 再使用rebase将对方仓库的数据同步到本地
 git fetch {对应主机名}
 git rebase {对应主机名}/master
 # 或者使用pull --rebase
@@ -265,5 +265,4 @@ git checkout -b {new branch name}
 # git branch -m {原分支名} {新分支名}	  
 # 							 -> 更改本地分支名字
 ```
-
 
