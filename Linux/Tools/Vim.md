@@ -37,7 +37,11 @@ R
 
 ###### :help {:w}    	 打开帮助文档
 
-###### :sp           	 新窗口(ctrl + ww 切换窗口 或 ctrl + w + h/j/k/l 上下左右切换)
+分新窗口(ctrl + ww 切换窗口 或 ctrl + w + h/j/k/l 上下左右切换)
+
+###### :sp file          	 纵向分一个新窗口，并打开文件file
+
+###### :vsp file			 横向分一个新窗口，并打开文件file
 
 ###### :!cmd             在外部shell执行命令
 
