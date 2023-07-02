@@ -123,6 +123,14 @@ ret      --- 返回
 # 只能跳转到标签，不能是寄存器的地址
 beq reg1,reg2,label # if reg1 == reg2, jump to label
 bne reg1,reg2,label # if reg1 != reg2, jump to label
+# 小于则置位（1），都针对于有符号整数
+slt reg1,reg2,reg3  # $reg1 = 1 if $reg2 < $reg3
+slti reg1,reg2,imm  # $reg1 = 1 if $reg2 < imm
+# 对于无符号数
+sltu
+sltiu
+
+# 伪指令，由beq,bne,slt,slti,$zero共同实现
 bgt # >
 blt # <
 bge # >=
@@ -147,7 +155,7 @@ f.  从函数返回
 
 ##### Caller --- 当前函数（调用其他函数）
 
-###### 	work: 保存reg t和reg a(保存那些在当前函数中用到了的a和t寄存器),reg ra以及当前函数变量的值到stack，更新reg a(作为Callee的参数)，更新ra寄存器的值(以便被调用函数执行结束时返回)；Callee执行结束后，把stack中保存的寄存器的值回滚(restore)
+###### 	work: 保存reg t和reg a(保存那些在当前函数中用到了的a和t寄存器),reg ra以及当前函数变量的值到stack/s寄存器，更新reg a(作为Callee的参数)，更新ra寄存器的值(以便被调用函数执行结束时返回)；Callee执行结束后，把stack中保存的寄存器的值回滚(restore)
 
 ##### Callee --- 被调用的函数
 
