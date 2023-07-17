@@ -199,6 +199,8 @@ git remote -v				# 查看本地仓库所关联的远程仓库
 # 主机名只是个变量 值为仓库地址 只要不是origin即可(up,upstream..)
 # 对方仓库地址 https://...
 git remote add {主机名} {url 对方仓库的地址} 
+	# 移除远程主机
+	git remote remove {主机名}
 
 ## 同步仓库 将对方仓库的数据同步到本地
 # 先使用fetch拉取对方仓库的全部分支信息到本地仓库
@@ -261,14 +263,14 @@ git checkout -b {new branch name}
 ### 不常用命令
 
 ```bash 
-# git clone -o {主机名} {url} -> 修改主机名
+git clone -o {主机名} {url} # 修改主机名
 
-# git init                   -> 将当前目录变成一个本地仓库
+git init                   # 将当前目录变成一个本地仓库
 
-# git commit -a  			 -> 将工作区的修改一并提交
-#				 			 -> 但会略过未被跟踪的文件
+git commit -a  			   # 将工作区的修改一并提交
+ 				 		   # 但会略过未被跟踪的文件
 
-# git branch -m {原分支名} {新分支名}	  
-# 							 -> 更改本地分支名字
+git branch -m {原分支名} {新分支名}	  
+						   # 更改本地分支名字
 ```
 
