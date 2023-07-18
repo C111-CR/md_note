@@ -54,7 +54,7 @@ ssh-keygen -t ed25519 -C "the email"
 
 ###### `Rebase and merge` ：这种方法不会生成新的提交，例如 PR 中有 6 个提交，用此方法合并后，组长仓库也会新增 6 个提交。注意，这些提交的版本号与组员的提交不同，此外完全一样。
 
-##### 4. release
+#### 4. release
 
 ###### 标签是 Git 中的概念，而 releases 则是 Github、码云等源码托管商所提供的更高层的概念。Git 本身是没有 releases 这个概念，只有 tag。两者之间的关系则是，release 基于 tag，为 tag 添加更丰富的信息，一般是编译好的文件。
 
@@ -121,6 +121,8 @@ git commit -m {'备注'}      # -m是为此次提交添加备注
 git reset --soft HEAD^ 			# 撤销最近一次提交
 git reset --soft HEAD~n			# 撤销最近的n次提交			
 # 软退回(--soft)和硬退回(--hard)
+# 软退回会保留当前的修改（在暂存区）
+# 硬退回会删除当前修改
 git reset --hard {版本号}		  # 版本号由reflog命令获取
 
 ## 查看提交历史记录
@@ -151,9 +153,13 @@ git branch -u/{--set-upstream}		# 为当前分支创建跟踪流
 git checkout {branch name}
 git checkout -b {new branch name}	# 创建并切换到新分支
 
+## 分支合并
+git checkout master
+git merge iss21						# 将iss21分支合并到master中 
+
 ## 删除分支(既要删除远程分支 也要删除本地分支)
 # 删除远程分支
-git push {主机名} :{远程分支名}    # 原理是将空分支推送到远程分支
+git push {主机名} :{远程分支名}    		# 原理是将空分支推送到远程分支
 git push {主机名} --delete {远程分支名} # 通过--delete参数删除
 # 删除本地分支
 git branch -D {本地分支名1} ...
@@ -193,6 +199,8 @@ git remote -v				# 查看本地仓库所关联的远程仓库
 # 主机名只是个变量 值为仓库地址 只要不是origin即可(up,upstream..)
 # 对方仓库地址 https://...
 git remote add {主机名} {url 对方仓库的地址} 
+	# 移除远程主机
+	git remote remove {主机名}
 
 ## 同步仓库 将对方仓库的数据同步到本地
 # 先使用fetch拉取对方仓库的全部分支信息到本地仓库
@@ -255,14 +263,14 @@ git checkout -b {new branch name}
 ### 不常用命令
 
 ```bash 
-# git clone -o {主机名} {url} -> 修改主机名
+git clone -o {主机名} {url} # 修改主机名
 
-# git init                   -> 将当前目录变成一个本地仓库
+git init                   # 将当前目录变成一个本地仓库
 
-# git commit -a  			 -> 将工作区的修改一并提交
-#				 			 -> 但会略过未被跟踪的文件
+git commit -a  			   # 将工作区的修改一并提交
+ 				 		   # 但会略过未被跟踪的文件
 
-# git branch -m {原分支名} {新分支名}	  
-# 							 -> 更改本地分支名字
+git branch -m {原分支名} {新分支名}	  
+						   # 更改本地分支名字
 ```
 
