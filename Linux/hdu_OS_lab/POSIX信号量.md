@@ -1,6 +1,6 @@
 ## POSIX信号量
 
-head文件
+##### 头文件
 
 ```c
 #include <semaphore.h>
@@ -20,7 +20,7 @@ int sem_init(sem_name,int pshared, unsigned int value)
 
 ```c
 // pv operation
-int sem_wait(sem_t *sem_name)
+int sem_wait(sem_t *sem_name)	
 int sem_post(sem_t *sem_name)
 return 0:  // 成功
 return -1: // 失败
