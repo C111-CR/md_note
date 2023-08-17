@@ -1,10 +1,10 @@
 ## POSIX信号量
 
-head文件
+##### 头文件
 
 ```c
-#include<semaphore.h>
-#include<fcntl.h>
+#include <semaphore.h>
+#include <fcntl.h>
 ```
 
 ### 无名信号量
@@ -20,7 +20,7 @@ int sem_init(sem_name,int pshared, unsigned int value)
 
 ```c
 // pv operation
-int sem_wait(sem_t *sem_name)
+int sem_wait(sem_t *sem_name)	
 int sem_post(sem_t *sem_name)
 return 0:  // 成功
 return -1: // 失败
@@ -28,9 +28,9 @@ return -1: // 失败
 
 ```c
 int sem_getvalue(sem_t *sem, int *sval);
-    eg:	int sval;
-		if(sem_getvalue(sem,&sval) == -1) perror("sem_getvalue");
-
+eg:	int sval;
+    if(sem_getvalue(sem,&sval) == -1) 
+        perror("sem_getvalue");
 int sem_destroy(sem_t *sem);
 
 return 0:   // 成功	
