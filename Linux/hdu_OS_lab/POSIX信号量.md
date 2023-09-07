@@ -41,7 +41,7 @@ return -1:  // 失败
 
 ```c
 //  create
-sem_t * sem_open(const char *name,int oflag (,mode_t mode,int value /* when vreate new file */ ) );
+sem_t * sem_open(const char *name,int oflag (,mode_t mode,int value /* when create new file */ ) );
 ```
 
 ```c
