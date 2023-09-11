@@ -98,6 +98,18 @@ a -lt b   # less than
 # FILE
 ```
 
+### 条件语句
+
+```bash
+if [[ {condition} ]];then
+	# 要执行的语句
+elif [[ {condition} ]];then
+	# 要执行的语句
+else
+	# 要执行的语句
+fi
+```
+
 ### 算术运算
 
 ```bash
